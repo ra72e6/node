@@ -1,4 +1,4 @@
-const mongoose = require('moongoose');
+const mongoose = require('mongoose');
 
 const contactSchema = new mongoose.Schema(
   {
@@ -11,11 +11,11 @@ const contactSchema = new mongoose.Schema(
     },
     phone: {
       type: String,
-      required: [ture, '전화번호는 꼭 기입해주세요.'],
+      required: [true, '전화번호는 꼭 기입해주세요.'],
     },
   },
   {
-    timestamps: ture,
+    timestamps: true,
   }
 );
 

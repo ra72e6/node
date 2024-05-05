@@ -1,7 +1,10 @@
 const express = require('express');
 const app = express();
 const dbConnect = require('./config/dbConnect');
+app.set('View engine', 'ejs');
+app.set('views', './views');
 
+app.use(express.static('./public'));
 dbConnect();
 
 app.get('/', (req, res) => {
